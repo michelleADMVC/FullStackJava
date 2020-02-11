@@ -2,7 +2,6 @@ $(document).ready(function () {
     generate();
     $('.imgConf').click(function(){
         change(catOrNinja($(this).attr('src')),$(this));
-        
     });
 });
 
@@ -24,7 +23,7 @@ function randomImage(){
     return image;
 }
 function catOrNinja(src){
-    if (src.indexOf('cat')> 0){
+    if (src.indexOf('cat') > 0){
         return "cat";
     }else{
         return "ninja";
