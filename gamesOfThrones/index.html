@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gei mostron</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="text-center card bg-dark text-light">
+        <h1>Casas del geimos tron</h1>
+    </header>
+    <div class="container-fluid mt-4 card bg-dark">
+        <div class="row">
+            <div id="Stark_house" class="col-3">
+                <div class="img_container">
+                    <img src="img/stark.jpg" alt="" class="house_img">
+                </div>
+            </div>
+            <div id="Targaryen_house" class="col-3">
+                <div class="img_container">
+                    <img src="img/targaryen.jpg" alt="" class="house_img">
+                </div>
+            </div>
+            <div id="Lannister_house" class="col-3">
+                <div class="img_container">
+                    <img src="img/lannister.jpg" alt="" class="house_img">
+                </div>
+            </div>
+            <div id="Baratheon_house" class="col-3 imgContainer">
+                <div class="img_container ">
+                    <img src="img/baratheon.png" alt="" class="house_img">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-light mt-4">
+        <div class="row">
+            <div class="col-2">
+
+            </div>
+            <div class="col-8 card bg-dark p-4">
+                <div class="info_title">
+                    <h2>Informacion de la casa : <span id="house_name">{house_name}</span> </h2>
+                </div>
+                <div class="info_paragraph">
+                    <span id="words_info">{info_data}</span>
+                </div>
+                <div id="titles_info" class="info_paragraph">
+                    
+                </div>
+            </div>
+            <div class="col-2">
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

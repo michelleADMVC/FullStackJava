@@ -1,0 +1,24 @@
+.img_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: rgb(43, 1, 1)
+}
+
+.house_img {
+    width: 90%;
+    height: 90%;
+}
+
+.house_img:hover {
+   transform: scale(0.9);
+}
+
+.guide {
+    border: 2px solid rgb(255, 0, 170);
+}
