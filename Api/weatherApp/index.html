@@ -12,8 +12,8 @@
 
 <body>
     <header>
-       <h1 class= "text-center">
-           Api del tiem po
+       <h1 class= "text-center p-3">
+           Consulta el clima colega OWO
        </h1>
     </header>
     <div class="container-fluid">
@@ -23,9 +23,9 @@
             </div>
             <div class="col-4">
                 <div class="weatherForm">
-                    <form class="card bg-dark p-3" action="submit" method="GET">
+                    <form class="card bg-dark m-3 p-3" action="submit" method="GET">
                         <label for="location" class="text-center text-light">
-                            <p>Escriba la ciudad</p>
+                            <h2>Escriba la ciudad</h2>
                         </label>
                         <input id="location" name="location" type="text" placeholder="Ciudad">
                         <input type="submit" value="Enviar">
@@ -41,7 +41,9 @@
             </div>
         </div>
     </div>
-  
+    <footer class="text-center p-3 m-3">
+        Disclaimer : Por flojera y por otros motivos sin explicacion, solo damos la temperatura del lugar donde estas consultando, nuestro presupuesto actual no da para mas informacion, no tenemos calefactor y la puerta del baño no tiene pestillo.
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
