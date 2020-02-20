@@ -5,22 +5,22 @@ $(document).ready(function(){
     $('#Stark_house').click(function(){
         console.log('Click in stark house');
         var results = searchHouse("Stark");  
-        displayData(results);
+        displayData(results,1);
     });
     $('#Targaryen_house').click(function () {
         console.log('Click in Targaryen house');
         var results = searchHouse("Targaryen");  
-        displayData(results);
+        displayData(results,2);
     });
     $('#Lannister_house').click(function () {
         console.log('Click in Lannister house');
         var results = searchHouse("Lannister");  
-        displayData(results);
+        displayData(results,3);
     });
     $('#Baratheon_house').click(function () {
         console.log('Click in Baratheon house');
         var results = searchHouse("Baratheon");  
-        displayData(results);
+        displayData(results,4);
     });
 
     
@@ -44,13 +44,24 @@ function searchHouse(houseName){
     }
     return results;
 }
-function displayData(data){
+function displayData(data,houseReference){
     console.log(data);
+    var houseResult;
+    switch (houseReference){
+        case 1: houseResult = data[0];
+            break;
+        case 2: houseResult = data[0];
+            break;
+        case 3: houseResult = data[2];
+            break;
+        case 4: houseResult = data[1];
+            break;
+    }
+    console.log(houseResult);
     
-    var firstResult = data[0];
-    var name = firstResult.name;
-    var words = firstResult.words;
-    var titles = houseTitles(firstResult);
+    var name = houseResult.name;
+    var words = houseResult.words;
+    var titles = houseTitles(houseResult);
     if(words == ""){
         words= 'N/A';
     }
