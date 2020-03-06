@@ -26,4 +26,4 @@ function display_dataHTML(res){
 }
 function farenheitToCelsius(value){
     return (value - 273.15);
-}
+} 
