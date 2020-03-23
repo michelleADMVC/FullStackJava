@@ -1,0 +1,44 @@
+A continuación se muestra un archivo de ejemplo web.xml que usaremos para configurar servlets. Su trabajo es analizar este archivo y dar una hipótesis del propósito de cada etiqueta.
+
+● <display-name> // El nombre del proyecto, de la aplicacion
+
+● <servlet> //Una peticion 
+
+● <servlet-name> //El nombre de la peticion 
+
+● <servlet-class> //La clase en donde esta alojada el servlet
+
+● <servlet-mapping> //Todas las direcciones del servlet 
+
+● <url-pattern>
+
+● <welcome-file> //Linea deberia decir que la etiqueta index.html es el archivo de bienvenida, lo primero que vera el usuario al enviar un request
+
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <display-name>SimpleServletProject</display-name>
+    
+    <servlet>
+        <servlet-name>simpleServlet</servlet-name>
+        <servlet-class>org.codingdojo.tutorial.SimpleServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>simpleServlet</servlet-name>
+        <url-pattern>/simpleServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>xmlServlet</servlet-name>
+        <servlet-class>or.codingdojo.tutorial.XmlServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>xmlServlet</servlet-name>
+        <url-pattern>/xmlServletpath</url-pattern>
+    </servlet-mapping>
+    
+    <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+</web-app>

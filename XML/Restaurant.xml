@@ -1,0 +1,26 @@
+<web-app>
+    <item category="desayuno">
+    <name>Pan con queso</name>
+    <price>2000</price>
+        <item category="extra">
+        <name>Cafe</name>
+        </item>
+    </item>
+    <name></name>
+    <item category="desayuno">
+     <name>Hotkeys</name>
+     <price>3.000</price>
+        <item category="extra">
+        <name>Cafe</name>
+        </item>
+    </item>
+     <item category="cena">
+     <name>Pavo al horno</name>
+     <price>12.000 </price>
+    </item>
+     <item category="cena">
+     <name>Churrasco italiano con papas fritas</name>
+     <price>6.000 </price>
+    </item>
+   
+</web-app
