@@ -1,0 +1,33 @@
+.button-container{
+ 		display:flex;
+ 		 align-items: center;
+  		justify-content: center;
+ 	}
+ 	
+.guide{
+	border:solid 2px fuchsia;
+}
+.action_container{
+	display:flex;
+	flex-direction:row;
+}
+
+.flex_center{
+	display:flex;
+	align-content: center;
+	justify-content: center;
+}
+.full{
+	width: 100%;
+}
+.debug{
+	height :100px;
+	width:200px;
+	padding : 5px;
+	color :red;
+	z-index :2;
+	position: fixed;
+	float: top; 
+	background-color: rgba(0,0,0,0.70);
+	
+}
