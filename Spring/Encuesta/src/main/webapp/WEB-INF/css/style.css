@@ -1,0 +1,15 @@
+.survey{
+	width: 300px;
+}
+.results{
+	width: 500px;
+	
+}
+.guide{
+	border: solid 1px fuchsia;
+}
+#app{
+	display: flex;
+	align-items: center;
+  	justify-content: center;
+}
