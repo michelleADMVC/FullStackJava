@@ -1,0 +1,49 @@
+.guide{
+	border: solid 2px fuchsia;
+}
+#app{
+	width: 100%;
+	height: 100vh;
+	display:flex;
+	flex-direction: column;
+}
+.game_buttons{
+	height: 50%;
+	display:flex;
+	align-items: center;
+ 	justify-content: center;
+	
+}
+.activities_title{
+	height: 9%;
+	font-size:25px;
+	display:flex;
+	align-items: center;
+ 	justify-content: center;
+ 	overflow: hidden;
+}
+.activities{
+	height: 30%;
+	display:flex;
+ 	overflow: scroll;
+ 	display:flex;
+ 	flex-direction: column-reverse;
+}
+.full{
+	width: 100%;
+}
+.game_action{
+	align-items: center;
+ 	justify-content: center;
+	display:flex;
+	height: 50%;
+	width: 200px;
+	margin: 50px;
+	flex-direction: column;
+}
+.game_action_title{
+	font-size: 35px;
+}
+.game_action_content{
+	font-size: 15px;
+}
