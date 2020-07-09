@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<title>Crud app</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+<div th:if="${user != null}">
+	<h1 th:text="${user.getFirst_name()}">Test</h1>
+	<div>Last name : <span th:text="${user.getLast_name()}"></span></div>
+	<div>ID : <span th:text="${user.getId()}"></span></div>
+	<div>Email : <span th:text="${user.getEmail()}"></span></div>
+	<div>Password : <span th:text="${user.getPassword()}"></span></div>
+</div>
+<div th:if="${user == null}">
+	<h1> User not found</h1>
+</div>
+
+</body>
+</html>
