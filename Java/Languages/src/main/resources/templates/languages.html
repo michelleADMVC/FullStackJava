@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
+<head>
+<meta charset="UTF-8">
+<title>Languages</title>
+<link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+<div id="app" >
+	<div class="navbar bg-dark p-2 text-white">
+		<h1>Languages</h1>
+	</div>
+	<div class= "data">
+		<table class="table">
+		  <thead>
+		    <tr >
+		      <th scope="col">Name</th>
+		      <th scope="col">Creator</th>
+		      <th scope="col">Version</th>
+		      <th scope="col">Action</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr th:each="lang: ${langs}">
+		      <td>
+			      <a th:href=@{languages/{path}(path=${lang.id})}> 
+				      <span th:text="${lang.getName()}"></span>
+			      </a> 
+		      </td>
+		      <td  th:text="${lang.getCreator()}"></td>
+		      <td  th:text="${lang.getCurrentVersion()}"></td>
+		      <td>
+		      	<div class="button_action_container">
+			      	<form action="" method="post">
+			      		<input type = "hidden" name="id" th:value=${lang.getId()}>
+			      		<input type = "hidden" name="action"value="delete">
+			      		<button class="btn btn-danger mr-3">Delete</button>
+			      	</form>	
+			       <a class= "btn btn-primary"
+			       th:href=@{languages/edit/{path}(path=${lang.id})}> 
+				     Edit
+			      </a> 
+		      	</div>
+		      </td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+	<div class= "new_language ">
+		<div class= "new_language_form form-row p-2 card">
+			<form class="form-group" action="" method= "POST" >
+				<div>
+				<input name = "name" type=text minlength="2" maxlength="20" required class ="form-control" placeholder="Language name">
+				</div>
+				<div>
+				<input name = "creator" minlength="2" maxlength="20" type=text required class ="form-control" placeholder="Creator">
+				</div>
+				<div>
+				<input name = "currentVersion" type=text required class ="form-control" placeholder="Version">
+				</div>
+				<div>
+				<input type="hidden" name= "action" value="add_language">
+				<button type="submit" class= "mt-3 btn btn-dark form-control">Submit</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	</div>
+</body>
+</html>
