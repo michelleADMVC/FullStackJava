@@ -1,0 +1,28 @@
+.guide{
+	border: solid 2px fuchsia;
+}
+#app{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+#app_top{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+.data{
+	overflow:scroll;
+	overflow-x: hidden;
+	height: 80%;
+}
+.button_action_container{
+	display:flex;
+}
+.center{
+	  display: flex;
+  align-items: center;
+  justify-content: center;
+}
