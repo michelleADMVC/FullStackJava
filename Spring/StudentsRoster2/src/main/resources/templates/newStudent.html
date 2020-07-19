@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+<title>Student roster</title>
+</head>
+<body>
+<div class="bg-dark text-white navbar">
+<h1>New Student</h1>
+</div>
+
+<div class="row">
+	<div class="col-6 card pt-3">
+		<form class= "form-group p-3" method="get" action="/students/create">
+			<div >
+				<label for="firstName">First name</label>
+				<input class="form-control" type="text" required name = "firstName">
+			</div>
+			<div >
+			<label for="lastName">Last name</label>
+				<input class="form-control" type="text" required name= "lastName">
+			</div>
+			<div >
+			<label for="age">Age</label>
+				<input class="form-control" type="number" required name= "age">
+			</div>
+			<div >
+				<button class=" mt-3 form-control btn btn-primary">Create</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+</body>
+</html>
