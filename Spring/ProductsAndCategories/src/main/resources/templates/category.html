@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+<title>Products and categories</title>
+</head>
+<body>
+<div th:if="${category == null}">
+	<h1>Category not found</h1>
+</div>
+<div th:if="${category != null}">
+	<h1><span th:text = "${category.getName()}"></span></h1>
+	<div class="row">
+		<div class="col-4 pl-4">
+		Products : 
+		<ul th:each="product: ${category.getProducts()}">
+			<li th:text="${product.getName()}"></li>
+		</ul>
+		</div>
+		<div class="col-4">
+			<form class ="form-group"method = "post" action="/product/add">
+				<label for="id">Products</label>
+			    <select class="form-control" name="product_id">
+			            <option th:each="product: ${availableProducts}"
+			            th:text="${product.getName()}"
+			            th:value="${product.getId()}"></option>				   
+			    </select>
+			    
+			    <input type="hidden" name="category_id" th:value = "${category.getId()}" >
+			    <button type="submit" class= "btn btn-primary">submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
