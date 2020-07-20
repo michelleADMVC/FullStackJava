@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+<title>Student roster</title>
+</head>
+<body>
+
+<div th:if="${dormitoryName == null}">
+<h1>Dormitory not found</h1>
+<a href="/dorms">Back</a>
+</div>
+<div th:if="${dormitoryName != null}">
+	<div class="navbar bg-dark text-white">
+		<h1><span th:text = "${dormitoryName}"></span></h1>
+		<a href="/dorms">Back</a>
+	</div>
+	<div class="row">
+		<div class="card mb-5 p-3 mt-3 col-6">
+			<form method ="get" action="add">
+				<div>
+			 	<label for="id">Select student</label>
+			    <select class="form-control" name="student">
+			            <option th:each="student: ${availableStudents}"
+			            th:text="${student.getSelectOptionString()}"
+			            th:value="${student.getId()}"></option>				   
+			    </select>
+			    <input type="hidden" th:value="${dormitoryId}" name="id">
+				</div>
+				<div>
+					<button type= "submit" class="btn btn-primary mt-3">Add student</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class= "">
+		<table class="table">
+		  <thead>
+		    <tr >
+		      <th scope="col">Name</th>
+		      <th scope="col">Action</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr th:each="student: ${dormitoryStudents}">
+		       	<td th:text = "${student.getSelectOptionString()}"> </td>
+		       	<td>
+		       		<form action="/dorms/removeStudent">
+		       		<input type="hidden" th:value="${student.getId()}" name="student">
+		       		<input type="hidden" th:value="${dormitoryId}" name="id">
+		       		<button class="btn btn-link" type="submit">Delete</button>
+		       		</form>
+		       		
+		       	</td>
+		    </tr>
+		    
+		  </tbody>
+		</table>
+	</div>
+</div>
+
+
+</body>
+</html>

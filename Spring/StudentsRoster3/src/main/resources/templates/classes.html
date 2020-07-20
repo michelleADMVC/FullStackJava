@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+<title>Student roster</title>
+</head>
+<body>
+<div class="bg-dark text-white navbar">
+<h1>All Classes</h1>
+<a href="/students">Go to students</a>
+<!-- <a href="/dorms">Dormitories</a> -->
+<a href="/classes/new">New class</a>
+</div>
+
+<div class= "data card">
+	<table class="table">
+	  <thead>
+	    <tr >
+	      <th scope="col">Name</th>
+	      <th scope="col">Students</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr th:each="class: ${classes}">
+	    	<td>
+	     		<a th:href=@{classes/{path}(path=${class.getId()})}> 
+					<span th:text="${class.getName()}"></span>
+			 	</a> 
+	        </td>
+		    <td  th:text="${class.getStudents().size()}"></td>
+	    </tr>
+	  </tbody>
+	</table>
+</div>
+
+</body>
+</html>
