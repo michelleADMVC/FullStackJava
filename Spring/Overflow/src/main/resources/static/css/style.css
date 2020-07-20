@@ -1,0 +1,20 @@
+body{
+	margin:0px;
+	padding : 0px;
+}
+.guide{
+	border: solid 2px fuchsia;
+}
+#app{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+.container{
+	display:flex;
+	flex-direction : row;
+}
+.half{
+	width: 50%;
+}
