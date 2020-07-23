@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+<title>Ninjas and dojos</title>
+</head>
+<body>
+<div class="navbar bg-dark text-white">
+	<h1 th:text="${dojoName}"></h1>
+</div>
+<div class= "data card">
+	<table class="table">
+	  <thead>
+	    <tr >
+	      <th scope="col">First name</th>
+	      <th scope="col">Last name</th>
+	      <th scope="col">Age</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr th:each="ninja: ${ninjas}">
+	        <td  th:text="${ninja.getFirstName()}"></td>
+	        <td  th:text="${ninja.getLastName()}"></td>
+	        <td  th:text="${ninja.getAge()}"></td>
+	    </tr>
+	  </tbody>
+	</table>
+</div>
+</body>
+</html>
