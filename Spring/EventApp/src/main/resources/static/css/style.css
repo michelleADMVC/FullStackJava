@@ -1,0 +1,38 @@
+body{
+	  overflow-x: hidden;
+	margin:0px;
+	padding : 0px;
+}
+.guide{
+	border: solid 2px fuchsia;
+}
+
+#app{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+#app2{
+	width: 100%;
+	height: 150vh;
+	display: flex;
+	flex-direction: column;
+}
+.center{
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+}
+
+.event_table_container{
+	height:30%;
+	overflow-x: hidden;
+	
+}
+
+.scroll{
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
